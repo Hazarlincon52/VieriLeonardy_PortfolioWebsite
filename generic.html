@@ -180,10 +180,20 @@
 										<span class="date">April 4, 2023</span>
 										<h3>Like A Rouge</h3>
 									</header>
-									<video class="image fit" src="video/Like A Rouge Demo Video.mp4" alt="" controls loop></video>
+									<div class="image fit" id="cusborder">
+										<img class="mySlides4" src="images/Title.jpg" alt="">
+										<img class="mySlides4" src="images/heroes.jpg" alt="">
+										<img class="mySlides4" src="images/Page2.jpg" alt="">
+										<img class="mySlides4" src="images/Page1.jpg" alt="">
+										<img class="mySlides4" src="images/Page4.jpg" alt="">
+							
+										<button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+										<button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+									</div>
 									<p>2D-Survival-Action game, the game objective is to survive as long as possible can with various attacks and abilities of the player character. Created with the Unity Engine, the game is published on Itch.io </p>
 									<ul class="actions special">
 										<li><a href="https://hazarlincon52.itch.io/like-a-rouge" target="_blank" rel="noopener noreferrer" class="button">Website</a></li>
+										<li><a href="https://youtu.be/190H3S3f4ng" target="_blank" rel="noopener noreferrer" class="button">Gameplay</a></li>
 									</ul>
 								</article>
 								<article>
@@ -191,12 +201,43 @@
 										<span class="date">October 1, 2022</span>
 										<h3>Run Dogger</h3>
 									</header>
-									<video class="image fit" src="video/Run Dogger Demo Video.mp4" alt="" controls loop></video>
+									<div class="image fit" id="cusborder">
+										<img class="mySlides5" src="images/Banner1.jpg" alt="">
+										<img class="mySlides5" src="images/Main Menu Screen.jpg" alt="">
+										<img class="mySlides5" src="images/Control.jpg" alt="">
+										<img class="mySlides5" src="images/enemies and power.jpg" alt="">
+										<img class="mySlides5" src="images/Gameplay.jpg" alt="">
+													
+										<button class="w3-button w3-black w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
+										<button class="w3-button w3-black w3-display-right" onclick="plusDivs5(1)">&#10095;</button>
+									</div>
 									<p>2D-Survival game, the aim of the game is to avoid/dodge enemies coming from various directions. Created with the Unity Engine, the game is published on Itch.io</p>
 									<ul class="actions special">
 										<li><a href="https://hazarlincon52.itch.io/run-dodger" target="_blank" rel="noopener noreferrer" class="button">Website</a></li>
+										<li><a href="https://youtu.be/L3sEi_ygKMc" target="_blank" rel="noopener noreferrer" class="button">Gameplay</a></li>
 									</ul>
 								</article>
+								<article>
+									<header>
+										<span class="date">Oktober 1, 2022</span>
+										<h3>Run Dogger</h3>
+									</header>
+									<div class="image fit" id="cusborder">
+										<img class="mySlides6" src="images/matcher mainmenu.jpg" alt="">
+										<img class="mySlides6" src="images/matcher howtoplay.jpg" alt="">
+										<img class="mySlides6" src="images/matcher maingame.jpg" alt="">
+							
+										<button class="w3-button w3-black w3-display-left" onclick="plusDivs6(-1)">&#10094;</button>
+										<button class="w3-button w3-black w3-display-right" onclick="plusDivs6(1)">&#10095;</button>
+									</div>
+									<p>3D Puzzle Game, the goal of the game is to match all the same objects within the given time limit. Created with the Unity Engine, the game is published on Itch.io</p>
+									<ul class="actions special">
+										<li><a href="https://hazarlincon52.itch.io/matcher-game" target="_blank" rel="noopener noreferrer" class="button">Website</a></li>
+										<li><a href="https://youtu.be/ViY0ApI7dvQ" target="_blank" rel="noopener noreferrer" class="button">Gameplay</a></li>
+									</ul>
+								</article>
+								<article>
+									</article>
 							</section>
 
 						<!-- Footer -->
@@ -244,7 +285,9 @@
 				showDivs1(slideIndex);
 				showDivs2(slideIndex);
 				showDivs3(slideIndex);
-				
+				showDivs4(slideIndex);
+				showDivs5(slideIndex);
+				showDivs6(slideIndex);
 				function plusDivs1(n) {
 				  showDivs1(slideIndex += n);
 				}
@@ -253,6 +296,15 @@
 				}
 				function plusDivs3(n) {
 				  showDivs3(slideIndex += n);
+				}
+				function plusDivs4(n) {
+				  showDivs4(slideIndex += n);
+				}
+				function plusDivs5(n) {
+				  showDivs5(slideIndex += n);
+				}
+				function plusDivs6(n) {
+				  showDivs6(slideIndex += n);
 				}
 				
 				function showDivs1(n) {
@@ -278,6 +330,36 @@
 				function showDivs3(n) {
 				  var i;
 				  var x = document.getElementsByClassName("mySlides3");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				  }
+				  x[slideIndex-1].style.display = "block";  
+				}
+				function showDivs4(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides4");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				  }
+				  x[slideIndex-1].style.display = "block";  
+				}
+				function showDivs5(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides5");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				  }
+				  x[slideIndex-1].style.display = "block";  
+				}
+				function showDivs6(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides6");
 				  if (n > x.length) {slideIndex = 1}
 				  if (n < 1) {slideIndex = x.length}
 				  for (i = 0; i < x.length; i++) {
